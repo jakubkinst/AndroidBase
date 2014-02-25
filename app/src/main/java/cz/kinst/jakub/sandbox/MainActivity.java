@@ -4,13 +4,24 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 public class MainActivity extends Activity {
+
+    @InjectView(R.id.textView)
+    TextView mTextView;
+    @InjectView(R.id.button)
+    Button mButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.inject(this);
     }
 
 
