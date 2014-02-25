@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:actionBarStyle">@style/SandBox.ActionBar</item>
+        <item name="android:windowBackground">@color/bg_black</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:textViewStyle">@style/TextView</item>
+    </style>
+
+    <style name="SandBox.ActionBar" parent="@android:style/Widget.ActionBar">
+        <item name="android:background">@color/main_black</item>
+        <item name="android:titleTextStyle">@style/ActionBarTitle</item>
+    </style>
+
+    <style name="ActionBarTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+    <style name="TextView" parent="android:Widget.Holo.TextView">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+    <style name="Button" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+</resources>
