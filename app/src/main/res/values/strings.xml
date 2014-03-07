@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SandBox</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">YTS Torrents</string>
     <string name="action_settings">Settings</string>
     <string name="action_about">About</string>
+    <string name="quality_1080">1080p</string>
+    <string name="quality_720">720p</string>
+    <string name="quality_3d">3D</string>
+    <string name="listing_movies">Listing movies</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

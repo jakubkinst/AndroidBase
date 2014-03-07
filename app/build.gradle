@@ -26,12 +26,33 @@ android {
 dependencies {
     compile 'com.android.support:support-v4:+'
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile project(':jkutils')
+
+    // GSON
     compile 'com.google.code.gson:gson:2.2.+'
+
+    // Guava
     compile 'com.google.guava:guava:16.0.+'
+
+    // Crouton
     compile 'de.keyboardsurfer.android.widget:crouton:1.8.+'
+
+    // OKHttp
     compile 'com.squareup.okhttp:okhttp:1.3.+'
+
+    // Retrofit
+    compile 'com.squareup.retrofit:retrofit:1.4.1'
+
+    // Butterknife
     compile 'com.jakewharton:butterknife:4.0.+'
-    compile 'com.squareup.dagger:dagger:1.2.+'
+
+    // Otto
     compile 'com.squareup:otto:1.3.+'
-    compile 'com.github.amigold.fundapter2:library:1.01'
+
+    // Android Styled Dialogs
+    compile 'eu.inmite.android.lib:android-styled-dialogs:1.1.2@aar'
+
+    // Picasso
+    compile 'com.squareup.picasso:picasso:2.2.0'
 }
