@@ -19,9 +19,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListActivity"
+            android:name="cz.kinst.jakub.sandbox.TorrentActivity"
             android:parentActivityName=".MainActivity"
-            android:label="@string/title_activity_list" >
+            android:label="@string/title_activity_torrent" >
         </activity>
     </application>
 

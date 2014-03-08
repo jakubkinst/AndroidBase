@@ -1,21 +1,35 @@
 package cz.kinst.jakub.sandbox;
 
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 import butterknife.ButterKnife;
+import butterknife.InjectView;
 import cz.kinst.jakub.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 
+
+    @InjectView(R.id.pager)
+    ViewPager mPager;
+    @InjectView(R.id.container)
+    FrameLayout mContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
-        getSupportFragmentManager().beginTransaction().add(R.id.container,MainFragment.newInstance()).commit();
+
+        if (mPager != null) { // PHONE Layout
+            mPager.setPageMargin(100);
+            mPager.setAdapter(new MainPagerAdapter(getSupportFragmentManager()));
+        } else { // TABLET Layout
+
+        }
     }
 
     /*

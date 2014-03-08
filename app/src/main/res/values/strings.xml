@@ -10,5 +10,10 @@
     <string name="listing_movies">Listing movies</string>
     <string name="title_activity_list">ListActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="movies">Movies</string>
+    <string name="network_error">Network error</string>
+    <string name="title_activity_torrent">TorrentActivity</string>
+    <string name="imdb">View on IMDB.com</string>
+    <string name="magnet">Magnet link</string>
 
 </resources>

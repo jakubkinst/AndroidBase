@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:animateLayoutChanges="true"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/list"
-        android:layout_gravity="left|top"
-        android:choiceMode="singleChoice"
-        tools:listitem="@layout/item_torrent" />
-</FrameLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/widget_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Title"
+            android:id="@+id/title"
+            android:textSize="30sp"
+            android:layout_margin="@dimen/widget_margin"
+            android:textColor="@color/secondary_color" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loading"
+            android:layout_gravity="center" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/list"
+            android:layout_gravity="left|top"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay"
+            android:choiceMode="singleChoice"
+            tools:listitem="@layout/item_torrent"
+            android:padding="@dimen/widget_margin" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -2,42 +2,78 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/activity_horizontal_margin">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_height="match_parent"
         android:id="@+id/imageView"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerCrop"
+        android:src="@drawable/poster_large"
+        android:layout_margin="@dimen/widget_margin" />
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_gravity="center_vertical"
         android:layout_weight="1">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Title"
-            android:id="@+id/title"
-            android:textSize="20sp" />
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:padding="@dimen/widget_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Movie Title Can Be Long"
+                android:id="@+id/title"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Genre"
+                android:id="@+id/genre" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1080p"
+                    android:id="@+id/quality"
+                    android:textSize="11sp"
+                    android:alpha="0.8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.7 GB"
+                    android:id="@+id/size"
+                    android:textSize="11sp"
+                    android:alpha="0.8"
+                    android:layout_marginLeft="5dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Genre"
-            android:id="@+id/genre" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rating"
+            android:text="9.9"
             android:id="@+id/rating"
-            android:textColor="@color/secondary_color" />
+            android:textColor="@color/secondary_color"
+            android:textSize="50sp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/widget_margin" />
     </LinearLayout>
 
 </LinearLayout>
