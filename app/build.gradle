@@ -21,13 +21,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
 }
 
 dependencies {
     compile 'com.android.support:support-v4:+'
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile project(':jkutils')
+    compile project(':androidbase')
 
     // GSON
     compile 'com.google.code.gson:gson:2.2.+'
@@ -43,9 +46,6 @@ dependencies {
 
     // Retrofit
     compile 'com.squareup.retrofit:retrofit:1.4.1'
-
-    // Butterknife
-    compile 'com.jakewharton:butterknife:4.0.+'
 
     // Otto
     compile 'com.squareup:otto:1.3.+'

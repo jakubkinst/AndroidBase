@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AndroidBase.Theme" parent="android:Theme.Holo">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:actionBarStyle">@style/AndroidBase.Theme.ActionBar</item>
+        <item name="android:windowBackground">@color/bg_black</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:buttonStyle">@style/AndroidBase.Theme.Button</item>
+        <item name="android:textViewStyle">@style/AndroidBase.Theme.TextView</item>
+        <item name="ptrHeaderStyle">@style/AndroidBase.PullToRefresh.Custom.Style</item>
+    </style>
+
+    <style name="AndroidBase.Theme.ActionBar" parent="@android:style/Widget.ActionBar">
+        <item name="android:background">@color/main_black</item>
+        <item name="android:titleTextStyle">@style/AndroidBase.Theme.ActionBarTitle</item>
+        <item name="android:displayOptions">showTitle</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="AndroidBase.Theme.ActionBarTitle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <style name="AndroidBase.Theme.TextView" parent="android:Widget.Holo.TextView">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+    <style name="AndroidBase.Theme.Button" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+    <!--PullToRefresh Custom Style-->
+    <style name="AndroidBase.PullToRefresh.Custom.Style" parent="android:Widget">
+        <item name="ptrProgressBarColor">@color/accent</item>
+    </style>
+
+
+</resources>

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="secondary_color">#ffe5b73d</color>
+    <color name="accent">#ffe5b73d</color>
 </resources>

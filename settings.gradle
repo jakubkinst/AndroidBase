@@ -1,1 +1,1 @@
-include ':app', ':jkutils'
+include ':app', 'androidbase'

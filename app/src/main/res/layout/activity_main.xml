@@ -3,10 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container"
-    tools:context="cz.kinst.jakub.sandbox.MainActivity">
-<android.support.v4.view.ViewPager
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" android:id="@+id/pager" >
+    tools:context="cz.kinst.jakub.yts.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pager">
 
     </android.support.v4.view.ViewPager>
 </FrameLayout>

@@ -24,14 +24,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:padding="@dimen/widget_margin">
+            android:paddingTop="@dimen/widget_margin"
+            android:paddingBottom="@dimen/widget_margin">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Movie Title Can Be Long"
                 android:id="@+id/title"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="#efefef" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -70,7 +72,7 @@
             android:layout_height="wrap_content"
             android:text="9.9"
             android:id="@+id/rating"
-            android:textColor="@color/secondary_color"
+            android:textColor="@color/accent"
             android:textSize="50sp"
             android:layout_gravity="center_vertical"
             android:layout_margin="@dimen/widget_margin" />
