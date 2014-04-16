@@ -7,9 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.romainpiel.shimmer.Shimmer;
+import com.romainpiel.shimmer.ShimmerTextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -48,7 +49,7 @@ public class TorrentListFragment extends BaseFragment implements OnRefreshListen
     @InjectView(R.id.list)
     ListView mList;
     @InjectView(R.id.loading)
-    ProgressBar mLoading;
+    ShimmerTextView mLoading;
     @InjectView(R.id.title)
     TextView mTitleTextView;
     @InjectView(R.id.ptr_layout)
@@ -100,6 +101,10 @@ public class TorrentListFragment extends BaseFragment implements OnRefreshListen
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        // Shimmering TextView init
+        new Shimmer().start(mLoading);
+
         mTitleTextView.setText(mTitle);
         ActionBarPullToRefresh.from(getActivity())
                 .allChildrenArePullable()
@@ -159,7 +164,6 @@ public class TorrentListFragment extends BaseFragment implements OnRefreshListen
         mList.setAdapter(mAdapter);
 
         mList.setVisibility(View.INVISIBLE);
-
         loadData();
     }
 

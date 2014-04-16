@@ -56,6 +56,8 @@ dependencies {
     // Picasso
     compile 'com.squareup.picasso:picasso:2.2.0'
 
+    // Shimmer TextView (Loading text)
+    compile 'com.romainpiel.shimmer:library:1.2.0@aar'
     // StatusBar Tint
     //compile 'com.readystatesoftware.systembartint:systembartint:+'
 }

@@ -28,11 +28,13 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
-        <ProgressBar
-            style="?android:attr/progressBarStyle"
+        <com.romainpiel.shimmer.ShimmerTextView
+            android:id="@+id/loading"
+            android:text="@string/loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/loading"
+            android:textColor="#444"
+            android:textSize="20sp"
             android:layout_gravity="center" />
 
         <uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
