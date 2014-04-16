@@ -48,7 +48,7 @@ public class BaseActivity extends FragmentActivity {
     }
 
     public void croutonError(CharSequence text) {
-        Crouton.makeText(this, text, Style.INFO).show();
+        Crouton.makeText(this, text, Style.ALERT).show();
     }
 
     public void croutonError(int stringResId) {
@@ -56,7 +56,7 @@ public class BaseActivity extends FragmentActivity {
     }
 
     public void croutonInfo(CharSequence text) {
-        Crouton.makeText(this, text, Style.ALERT).show();
+        Crouton.makeText(this, text, Style.INFO).show();
     }
 
     public void croutonInfo(int stringResId) {
