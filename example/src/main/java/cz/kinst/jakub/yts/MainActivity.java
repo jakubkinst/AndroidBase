@@ -6,6 +6,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.squareup.phrase.Phrase;
+
+import java.util.Calendar;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import cz.kinst.jakub.androidbase.ui.BaseActivity;
@@ -56,7 +60,11 @@ public class MainActivity extends BaseActivity {
             case R.id.action_settings:
                 return true;
             case R.id.action_about:
-                SimpleDialogFragment.createBuilder(this, getSupportFragmentManager()).setTitle(R.string.action_about).setMessage(getString(R.string.credits)).show();
+                CharSequence credits = Phrase.from(getString(R.string.credits))
+                        .put("year", Calendar.getInstance().get(Calendar.YEAR))
+                        .put("version", BuildConfig.VERSION_NAME)
+                        .format();
+                SimpleDialogFragment.createBuilder(this, getSupportFragmentManager()).setTitle(R.string.action_about).setMessage(credits).show();
         }
         return super.onOptionsItemSelected(item);
     }

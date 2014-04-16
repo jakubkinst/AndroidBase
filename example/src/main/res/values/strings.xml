@@ -16,6 +16,6 @@
     <string name="imdb">View on IMDB.com</string>
     <string name="magnet">Magnet link</string>
     <string name="loading">Loading</string>
-    <string name="credits">Created by Jakub Kinst (2014)</string>
+    <string name="credits">Created by Jakub Kinst ({year}) v{version}</string>
 
 </resources>
