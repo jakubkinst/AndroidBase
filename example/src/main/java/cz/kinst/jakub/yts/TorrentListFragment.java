@@ -26,8 +26,6 @@ import cz.kinst.jakub.androidbase.ui.BaseFragment;
 import cz.kinst.jakub.androidbase.utils.Logger;
 import cz.kinst.jakub.yts.model.Torrent;
 import cz.kinst.jakub.yts.model.TorrentResponse;
-import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style;
 import hugo.weaving.DebugLog;
 import retrofit.Callback;
 import retrofit.RetrofitError;
@@ -195,7 +193,7 @@ public class TorrentListFragment extends BaseFragment implements OnRefreshListen
                 Logger.logE("Failed to load Torrents: " + error.getMessage());
                 mList.setVisibility(View.VISIBLE);
                 mLoading.setVisibility(View.INVISIBLE);
-                Crouton.makeText(getActivity(), getString(R.string.network_error), Style.ALERT).show();
+                croutonError(R.string.network_error);
                 mPtrLayout.setRefreshComplete();
             }
         });

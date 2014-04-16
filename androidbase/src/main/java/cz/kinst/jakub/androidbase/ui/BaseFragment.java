@@ -34,4 +34,28 @@ public class BaseFragment extends Fragment {
         mBus.unregister(this);
         super.onStop();
     }
+
+    public void croutonSuccess(CharSequence text) {
+        ((BaseActivity) getActivity()).croutonSuccess(text);
+    }
+
+    public void croutonSuccess(int stringResId) {
+        ((BaseActivity) getActivity()).croutonSuccess(getString(stringResId));
+    }
+
+    public void croutonError(CharSequence text) {
+        ((BaseActivity) getActivity()).croutonError(text);
+    }
+
+    public void croutonError(int stringResId) {
+        ((BaseActivity) getActivity()).croutonError(getString(stringResId));
+    }
+
+    public void croutonInfo(CharSequence text) {
+        ((BaseActivity) getActivity()).croutonInfo(text);
+    }
+
+    public void croutonInfo(int stringResId) {
+        ((BaseActivity) getActivity()).croutonInfo(getString(stringResId));
+    }
 }

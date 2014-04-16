@@ -20,8 +20,6 @@ import butterknife.InjectView;
 import butterknife.OnClick;
 import cz.kinst.jakub.androidbase.ui.BaseFragment;
 import cz.kinst.jakub.yts.model.Torrent;
-import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -91,7 +89,7 @@ public class TorrentFragment extends BaseFragment {
 
             @Override
             public void failure(RetrofitError error) {
-                Crouton.makeText(getActivity(), getString(R.string.network_error), Style.ALERT).show();
+                croutonError(R.string.network_error);
             }
         });
         mRating.setText(mTorrent.MovieRating);
