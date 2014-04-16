@@ -8,7 +8,8 @@
         <item name="android:textColor">@color/text</item>
         <item name="android:buttonStyle">@style/AndroidBase.Theme.Button</item>
         <item name="android:textViewStyle">@style/AndroidBase.Theme.TextView</item>
-        <item name="ptrHeaderStyle">@style/AndroidBase.PullToRefresh.Custom.Style</item>
+        <item name="ptrHeaderStyle">@style/AndroidBase.Theme.PullToRefresh</item>
+        <item name="sdlDialogStyle">@style/AndroidBase.Theme.Dialog</item>
     </style>
 
     <style name="AndroidBase.Theme.ActionBar" parent="@android:style/Widget.ActionBar">
@@ -37,8 +38,20 @@
     </style>
 
     <!--PullToRefresh Custom Style-->
-    <style name="AndroidBase.PullToRefresh.Custom.Style" parent="android:Widget">
+    <style name="AndroidBase.Theme.PullToRefresh" parent="android:Widget">
         <item name="ptrProgressBarColor">@color/accent</item>
+    </style>
+
+    <!--Dialog Style-->
+    <style name="AndroidBase.Theme.Dialog">
+        <!-- anything can be left out: -->
+        <item name="titleTextColor">@color/accent</item>
+        <item name="titleSeparatorColor">@color/accent</item>
+        <item name="messageTextColor">@color/text</item>
+        <item name="buttonTextColor">@color/text</item>
+        <item name="buttonBackgroundColorPressed">@color/accent_transparent</item>
+        <item name="buttonBackgroundColorFocused">@color/accent_transparent</item>
+        <item name="dialogBackground">@color/bg_black</item>
     </style>
 
 

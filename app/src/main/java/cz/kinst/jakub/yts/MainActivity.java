@@ -9,6 +9,7 @@ import android.widget.FrameLayout;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import cz.kinst.jakub.androidbase.ui.BaseActivity;
+import eu.inmite.android.lib.dialogs.SimpleDialogFragment;
 
 public class MainActivity extends BaseActivity {
 
@@ -49,8 +50,11 @@ public class MainActivity extends BaseActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id){
+            case R.id.action_settings:
+                return true;
+            case R.id.action_about:
+                SimpleDialogFragment.createBuilder(this, getSupportFragmentManager()).setTitle(R.string.action_about).setMessage(getString(R.string.credits)).show();
         }
         return super.onOptionsItemSelected(item);
     }
