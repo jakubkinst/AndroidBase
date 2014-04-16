@@ -3,9 +3,13 @@ package cz.kinst.jakub.yts;
 import javax.inject.Singleton;
 
 import cz.kinst.jakub.androidbase.AndroidModule;
+import cz.kinst.jakub.yts.model.Torrent;
 import dagger.Module;
 import dagger.Provides;
+import retrofit.Callback;
 import retrofit.RestAdapter;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
 @Module(
         injects = {
@@ -23,6 +27,16 @@ public final class YTSModule {
     YTSInterface provideYtsInterface() {
         return new RestAdapter.Builder()
                 .setEndpoint("http://yts.re/api")
-                .build().create(YTSInterface.class);
+                .build().create(YTSInterface.class).getDetails("asfsdf", new Callback<Torrent>() {
+                    @Override
+                    public void success(Torrent torrent, Response response) {
+
+                    }
+
+                    @Override
+                    public void failure(RetrofitError error) {
+
+                    }
+                });
     }
 }
