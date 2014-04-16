@@ -1,5 +1,18 @@
 apply plugin: 'android'
+apply plugin: 'hugo'
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.9.+'
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.0.+'
+    }
+}
+repositories {
+    mavenCentral()
+}
 android {
     compileSdkVersion 19
     buildToolsVersion '19.0.1'
@@ -8,7 +21,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 19
         versionCode 1
-        versionName "1.0"
+        versionName "0.1"
     }
 
     compileOptions {
@@ -38,26 +51,15 @@ dependencies {
     // Guava
     compile 'com.google.guava:guava:16.0.+'
 
-    // Crouton
-    compile 'de.keyboardsurfer.android.widget:crouton:1.8.+'
-
     // OKHttp
     compile 'com.squareup.okhttp:okhttp:1.3.+'
 
     // Retrofit
     compile 'com.squareup.retrofit:retrofit:1.4.1'
 
-    // Otto
-    compile 'com.squareup:otto:1.3.+'
-
-    // Android Styled Dialogs
-    compile 'eu.inmite.android.lib:android-styled-dialogs:1.1.2@aar'
-
     // Picasso
     compile 'com.squareup.picasso:picasso:2.2.0'
 
     // Shimmer TextView (Loading text)
     compile 'com.romainpiel.shimmer:library:1.2.0@aar'
-    // StatusBar Tint
-    //compile 'com.readystatesoftware.systembartint:systembartint:+'
 }

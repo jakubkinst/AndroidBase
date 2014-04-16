@@ -10,6 +10,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import cz.kinst.jakub.androidbase.ui.BaseActivity;
 import eu.inmite.android.lib.dialogs.SimpleDialogFragment;
+import hugo.weaving.DebugLog;
 
 public class MainActivity extends BaseActivity {
 
@@ -19,6 +20,7 @@ public class MainActivity extends BaseActivity {
     FrameLayout mContainer;
 
     @Override
+    @DebugLog
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

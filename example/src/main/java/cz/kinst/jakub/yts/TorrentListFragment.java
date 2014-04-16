@@ -28,6 +28,7 @@ import cz.kinst.jakub.yts.model.Torrent;
 import cz.kinst.jakub.yts.model.TorrentResponse;
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
+import hugo.weaving.DebugLog;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -175,7 +176,8 @@ public class TorrentListFragment extends BaseFragment implements OnRefreshListen
         startActivity(i);
     }
 
-    private void loadData() {
+    @DebugLog
+    public void loadData() {
         mAdapter.clear();
         Logger.logD("Loading data...");
         mYts.listTorrents(mOrder, mLimit, mQuality, mKeywords, mGenre, new Callback<TorrentResponse>() {
