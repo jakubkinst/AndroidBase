@@ -38,7 +38,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
 
-    compile 'com.android.support:support-v4:19.0.1'
+    compile 'com.android.support:support-v4:+'
 
     // Butterknife
     compile 'com.jakewharton:butterknife:4.0.+'
@@ -57,10 +57,12 @@ dependencies {
     compile 'de.keyboardsurfer.android.widget:crouton:1.8.+'
 
     // Android Styled Dialogs
-    compile 'eu.inmite.android.lib:android-styled-dialogs:1.1.2@aar'
+    compile ('eu.inmite.android.lib:android-styled-dialogs:1.1.2@aar'){
+        exclude module: 'support-v4'
+    }
 
     // PullToRefresh
-    compile 'com.github.chrisbanes.actionbarpulltorefresh:library:+'
+    compile('com.github.chrisbanes.actionbarpulltorefresh:library:+')
 }
 
-apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+apply from: 'gradle-mvn-push.gradle'

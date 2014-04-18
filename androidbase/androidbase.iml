@@ -77,9 +77,9 @@
     <orderEntry type="library" exported="" name="javawriter-2.3.0" level="project" />
     <orderEntry type="library" exported="" name="dagger-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="butterknife-4.0.1" level="project" />
+    <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="phrase-1.0.3" level="project" />
     <orderEntry type="library" exported="" name="android-styled-dialogs-1.1.2" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-19.0.1" level="project" />
     <orderEntry type="library" exported="" name="crouton-1.8.4" level="project" />
     <orderEntry type="library" exported="" name="dagger-compiler-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="aspectjrt-1.7.4" level="project" />

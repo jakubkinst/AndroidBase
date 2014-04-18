@@ -7,6 +7,15 @@ Together with an `example` app, it helps you kickstart your new app development.
 
 Project is based on gradle and works well with Android Studio/IntelliJ Idea IDE.
 
+How to use it
+=============
+
+add gradle dependency to your `build.gradle`
+
+    compile('cz.kinst.jakub:androidbase:0.1.4') {
+            exclude module: 'support-v4'
+    }
+
 ## License
 
     Copyright 2014 Jakub Kinst
